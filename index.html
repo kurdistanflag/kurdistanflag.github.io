@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Kurdistan Flag Creator</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles.css?p=25"
+      id="flag-css"
+    />
+    <script src="index.js?p=25" defer></script>
+    <noscript>This project requires JavaScript activated!</noscript>
+  </head>
+  <body class="wrapper">
+    <header>
+      <h1 id="main-heading"><a href="/">Kurdistan Flag Creator</a></h1>
+    </header>
+    <main>
+      <section id="settings">
+        <form id="flag-settings-form-old">
+          <div class="rows">
+            <div class="valign">
+              <div
+                class="icon"
+                title="Change Flag Width & Height"
+                data-id="flagwidth"
+              >
+                <object
+                  type="image/svg+xml"
+                  data="images/resize.svg"
+                  class="svgicon"
+                ></object>
+              </div>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <div
+                class="icon"
+                title="Change Flag Bands Color"
+                data-id="flagbandcolor2"
+              >
+                <object
+                  type="image/svg+xml"
+                  data="images/bands.svg"
+                  class="svgicon"
+                ></object>
+              </div>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <div
+                class="icon"
+                title="Change Flag Bands Angle"
+                data-id="flagbandangle"
+              >
+                <object
+                  type="image/svg+xml"
+                  data="images/angle.svg"
+                  class="svgicon"
+                ></object>
+              </div>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <div
+                class="icon"
+                title="Change Kurdistan Sun Color"
+                data-id="flagcolor"
+              >
+                <object
+                  type="image/svg+xml"
+                  data="images/sun.svg"
+                  class="svgicon"
+                ></object>
+              </div>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <div
+                class="icon"
+                title="Download Kurdistan Flag"
+                data-id="flagdownload"
+              >
+                <object
+                  type="image/svg+xml"
+                  data="images/download.svg"
+                  class="svgicon"
+                ></object>
+              </div>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <div
+                class="icon"
+                title="Share Your Kurdistan Flag"
+                data-id="flagshare"
+              >
+                <object
+                  type="image/svg+xml"
+                  data="images/share.svg"
+                  class="svgicon"
+                ></object>
+              </div>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <div class="icon" title="Quick Help" data-id="flaghelp">
+                <object
+                  type="image/svg+xml"
+                  data="images/help.svg"
+                  class="svgicon"
+                ></object>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section id="secondary-settings-panel" class="hidden" data-active-id="">
+        <form id="flag-settings-form">
+          <div class="rows">
+            <div class="valign">
+              <label>
+                <span class="label">Width</span>
+              </label>
+            </div>
+            <div class="number-input">
+              <button
+                class="spinner decrement"
+                data-id="flagwidth"
+                type="button"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="flagwidth"
+                name="flagwidth"
+                min="1"
+                value="600"
+                step="any"
+                class="customnuminput"
+              />
+              <button
+                class="spinner increment"
+                data-id="flagwidth"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+            <div class="valign">
+              <label>
+                <span class="label">Height</span>
+              </label>
+            </div>
+            <div class="number-input">
+              <button
+                class="spinner decrement"
+                data-id="flagdimension"
+                type="button"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="flagdimension"
+                name="flagdimension"
+                min="1"
+                value="400"
+                step="any"
+                class="customnuminput"
+              />
+              <button
+                class="spinner increment"
+                data-id="flagdimension"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <label>
+                <span class="label">Bands: 1<sup>st</sup></span>
+              </label>
+            </div>
+            <input
+              type="color"
+              name="flagbandcolor1"
+              id="flagbandcolor1"
+              value="#ed2024"
+            />
+            <div class="valign">
+              <label>
+                <span class="label">2<sup>nd</sup></span>
+              </label>
+            </div>
+            <input
+              type="color"
+              name="flagbandcolor2"
+              id="flagbandcolor2"
+              value="#ffffff"
+            />
+            <div class="valign">
+              <label>
+                <span class="label">3<sup>rd</sup></span>
+              </label>
+            </div>
+            <input
+              type="color"
+              name="flagbandcolor3"
+              id="flagbandcolor3"
+              value="#278e43"
+            />
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <label>
+                <span class="label">Bands</span>
+              </label>
+            </div>
+            <div class="number-input">
+              <button
+                class="spinner decrement"
+                data-id="flagbandangle"
+                type="button"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="flagbandangle"
+                name="flagbandangle"
+                min="0"
+                value="0"
+                max="360"
+                class="customnuminput"
+              />
+              <button
+                class="spinner increment"
+                data-id="flagbandangle"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+            <div class="valign">
+              <label>
+                <span class="label">Rays</span>
+              </label>
+            </div>
+            <div class="number-input">
+              <button
+                class="spinner decrement"
+                data-id="flagrayangle"
+                type="button"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="flagrayangle"
+                name="flagrayangle"
+                min="1"
+                value="17"
+                max="90"
+                class="customnuminput"
+              />
+              <button
+                class="spinner increment"
+                data-id="flagrayangle"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <label>
+                <span class="label">Sun</span>
+              </label>
+            </div>
+            <input
+              type="color"
+              name="flagcolor"
+              id="flagcolor"
+              value="#febd11"
+            />
+            <div class="valign">
+              <label>
+                <span class="label">Rays</span>
+              </label>
+            </div>
+            <div class="number-input">
+              <button
+                class="spinner decrement"
+                data-id="flagraynumbers"
+                type="button"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="flagraynumbers"
+                name="flagraynumbers"
+                value="21"
+                min="1"
+                class="customnuminput"
+              />
+              <button
+                class="spinner increment"
+                data-id="flagraynumbers"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="valign">
+              <label>
+                <span class="label">Download Flag</span>
+              </label>
+            </div>
+            <input
+              type="button"
+              name="flagdownload"
+              id="flagdownload"
+              value="Download"
+            />
+          </div>
+          <div class="rows flagshare">
+            <section id="flagshare">
+              <h2>Share</h2>
+              <hr />
+              <section>
+                <label>Share your design!</label>
+                <a href="" target="_blank" id="shareflaglink">
+                  <img id="shareflag" src="images/background.png" />
+                </a>
+                <div id="sharebutton">
+                  <object
+                    type="image/svg+xml"
+                    data="images/copy.svg"
+                    class="svgicon"
+                  ></object>
+                  <span id="copylinkspan">Copy Link</span>
+                </div>
+              </section>
+              <hr />
+              <section>
+                <label>Share on social media!</label>
+                <a
+                  class="twitter-share-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-size="large"
+                  href=""
+                  ><object
+                    type="image/svg+xml"
+                    data="images/tweet.svg"
+                    class="svgicon"
+                  ></object
+                  >Tweet</a
+                >
+              </section>
+            </section>
+          </div>
+          <div class="rows flaghelp">
+            <section id="flaghelp">
+              <h2>Quick Help</h2>
+              <div>
+                <section class="helpiconwrapper">
+                  <object
+                    type="image/svg+xml"
+                    data="images/resize.svg"
+                    class="helpsvgs quickhelp"
+                    data-id="flagwidth"
+                  ></object>
+                  <h3 class="quickhelp" data-id="flagwidth">Resize</h3>
+                </section>
+                <p>
+                  <strong>Width:</strong> You can use this number input box to
+                  set the width of the flag in pixels. Because Kurdistan flag
+                  has a 3:2 ratio, the width of the flag always has to be 3/2
+                  times bigger than its height to preserve the aspect ratio. As
+                  an example, if you set the width of the flag to 900, the
+                  height of the flag will automatically update itself to 600
+                  pixels to preserve the correct aspect of the flag.
+                </p>
+                <p>
+                  <strong>Height:</strong> You can use this number input box to
+                  set the height of the flag in pixels. Because Kurdistan flag
+                  has a 3:2 ratio, the height of the flag always has to be 3/2
+                  times smaller than its width to preserve the aspect ratio. As
+                  an example, if you set the height of the flag to 600, the
+                  width of the flag will automatically update itself to 900
+                  pixels to preserve the correct aspect of the flag.
+                </p>
+              </div>
+              <div>
+                <section class="helpiconwrapper">
+                  <object
+                    type="image/svg+xml"
+                    data="images/bands.svg"
+                    class="helpsvgs quickhelp"
+                    data-id="flagbandcolor2"
+                  ></object>
+                  <h3 class="quickhelp" data-id="flagbandcolor2">Bands</h3>
+                </section>
+                <p>
+                  You can set the color of each Kurdistan flag's bands by using
+                  these <b>3</b> color pickers. Kurdistan flag's
+                  <b>1<sup>st</sup></b> band has <b>#ed2024</b>,
+                  <b>2<sup>nd</sup></b> band has <b>#ffffff</b>,
+                  <b>3<sup>rd</sup></b> band has <b>#278e43</b> color as
+                  default.
+                </p>
+              </div>
+              <div>
+                <section class="helpiconwrapper">
+                  <object
+                    type="image/svg+xml"
+                    data="images/angle.svg"
+                    class="helpsvgs quickhelp"
+                    data-id="flagbandangle"
+                  ></object>
+                  <h3 class="quickhelp" data-id="flagbandangle">Angles</h3>
+                </section>
+                <p>
+                  <strong>Bands:</strong> You can set the direction of the 3
+                  bands of Kurdistan flag by this number box. You can create
+                  diagonal and vertical flags by this option. Default value is
+                  <b>0</b>
+                  as Kurdistan flag is horizontal.
+                </p>
+                <p>
+                  <strong>Rays:</strong> This number box will allow you to
+                  determine how thick or thin the Kurdish Sun rays will be. The
+                  default Sun Ray angle is around <b>17</b> degrees for each
+                  ray. The lesser the angle the thinner the rays become, and
+                  vice versa.
+                </p>
+              </div>
+              <div>
+                <section class="helpiconwrapper">
+                  <object
+                    type="image/svg+xml"
+                    data="images/sun.svg"
+                    class="helpsvgs quickhelp"
+                    data-id="flagcolor"
+                  ></object>
+                  <h3 class="quickhelp" data-id="flagcolor">Sun</h3>
+                </section>
+                <p>
+                  <strong>Color:</strong> You can set the color of Kurdish sun
+                  by using this colorpicker box. Kurdish Sun has
+                  <b>#febd11</b> as the default color.
+                </p>
+                <p>
+                  <strong>Rays:</strong> You can set the number of Kurdish sun
+                  rays by this option. Kurdish Sun has <b>21</b> rays as
+                  default.
+                </p>
+              </div>
+              <div>
+                <section class="helpiconwrapper">
+                  <object
+                    type="image/svg+xml"
+                    data="images/download.svg"
+                    class="helpsvgs quickhelp"
+                    data-id="flagdownload"
+                  ></object>
+                  <h3 class="quickhelp" data-id="flagdownload">Download</h3>
+                </section>
+                <p>
+                  You can download your final design of the Kurdistan flag to
+                  your computer or mobile phone as an image by using the
+                  download button.
+                </p>
+              </div>
+              <div>
+                <section class="helpiconwrapper">
+                  <object
+                    type="image/svg+xml"
+                    data="images/share.svg"
+                    class="helpsvgs quickhelp"
+                    data-id="flagshare"
+                  ></object>
+                  <h3 class="quickhelp" data-id="flagshare">Share</h3>
+                </section>
+                <p>
+                  You can share your final design of Kurdistan flag with others
+                  by clicking the <strong>Copy Link</strong> button. It will
+                  automatically copy the image link into your clipboard so that
+                  you can share it on any social media site. Users visiting your
+                  link will see your design automatically loaded up in the app
+                  for them.
+                </p>
+              </div>
+            </section>
+          </div>
+        </form>
+        <div id="closecontainer">
+          <object type="image/svg+xml" data="images/close.svg"></object>
+        </div>
+      </section>
+      <section id="flagcontainer">
+        <canvas id="flag">
+          Unsupported browser! This project requires Canvas technology!
+        </canvas>
+      </section>
+      <section id="zoomcontainer" class="">
+        <form id="zoom-form">
+          <label id="zoomlabel">Zoom</label>
+          <div class="number-input">
+            <div class="spinner decrement" data-id="flagzoom" type="button">
+              <object
+                type="image/svg+xml"
+                data="images/zoom-out.svg"
+                class="svgzoomicon"
+              ></object>
+            </div>
+            <input
+              type="number"
+              id="flagzoom"
+              name="flagzoom"
+              min="0"
+              value="100"
+              step="any"
+              class="customnuminput"
+            />
+            <div class="spinner increment" data-id="flagzoom" type="button">
+              <object
+                type="image/svg+xml"
+                data="images/zoom-in.svg"
+                class="svgzoomicon"
+              ></object>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
